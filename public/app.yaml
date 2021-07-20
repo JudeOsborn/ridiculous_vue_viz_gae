@@ -1,0 +1,40 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /css
+  static_dir: css
+
+- url: /css
+  static_dir: css
+
+- url: /img
+  static_dir: img
+
+- url: /js
+  static_dir: js
+
+- url: .*
+  static_files: index.html
+  upload: index\.html
+
+skip_files:
+- .git*
+- ^(.*/)?app.yaml
+- ^(.*/)?app.yml
+- ^(.*/)?index.yaml
+- ^(.*/)?index.yml
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*\.scss
+- ^(.*/)?.*\.md
+- ^(.*/)?.*\.rb
+- tmp
+- ^(.*/)?.*\.sass-cache
+- README.md
+- .gitignore
+- .*.json
